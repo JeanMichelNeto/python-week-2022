@@ -27,6 +27,3 @@ class Beer(SQLModel, table=True):
     def calculate_rate(cls, v, values):
         rate = mean([values["flavor"], values["image"], values["cost"]])
         return int(rate)
-
-
-beer = Beer(name="Lagunitas", style="IPA", flavor=3, image=6, cost=8)
